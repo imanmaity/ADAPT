@@ -1,0 +1,79 @@
+import java.io.*;
+import java.util.*;
+
+public void setPhoneNumber(long phoneNumber) throwsInvalidPhoneNumberExcception {
+	String phone = Long.toString(phoneNumber);
+	int mobileChecker = Pattern.matches("^[6-9][0-9]{9}$", phone) ? 1 : -1;
+	if (mobileChecker == 1) {
+		this.phoneNumber = phoneNumber;
+		} 
+		else {
+			throw new InvalidPhoneNumberExcception();
+		}
+	}
+
+public Address getAddress() {
+	return address;
+	}
+
+public void setAddress(Address address) {
+	this.address = address;
+	}
+
+@Override
+public String toString() {
+	return String.format("Customer [userId=%s, emailId=%s, password=%s, firstName=%s,lastName=%s, city=%s, gender=%s, phoneNumber=%s, address=%s]",userId, emailId, password, firstName, lastName, city, gender, phoneNumber, address);
+	}
+}
+
+class Address {
+	private String city;
+	private String state;
+	private int zip;
+	private String country;
+
+Address() {
+}
+	public Address(String city, String state, int zip, String country) {
+
+	this.city = city;
+	this.state = state;
+	this.zip = zip;
+	this.country = country;
+	}
+
+public String getCity() {
+	return city;
+	}
+public void setCity(String city) {
+	this.city = city;
+	}
+public String getState() {
+	return state;
+	}
+public void setState(String state) {
+	this.state = state;
+	}
+public int getZip() {
+	return zip;
+	}
+public void setZip(int zip) {
+	this.zip = zip;
+	}
+public String getCountry() {
+	return country;
+	}
+public void setCountry(String country) {
+	this.country = country;
+	}
+
+@Override
+public String toString() {
+	return String.format("Address [city=%s, state=%s, zip=%s, country=%s]",city, state, zip, country);
+	}
+}
+public class Source {
+
+public static void main(String[] args) throws InvalidNameException,InvalidPhoneNumberExcception {
+	}
+}

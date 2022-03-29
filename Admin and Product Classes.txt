@@ -1,0 +1,112 @@
+class Admin{
+    private int adminId;
+    private String email;
+    private String firstName;
+    // private String lastName;
+    private String password;
+    
+    public Admin(){
+        
+    }
+    public Admin(int adminId, String email, String firstName, String password){
+        this.adminId = adminId;
+        this.email = email;
+        this.firstName = firstName;
+        // this.lastName = lastName;
+        this.password = password;
+        
+    }
+    public int getAdminId(){
+        return adminId;
+    }
+    public String getEmailId(){
+        return email;
+    }
+    public String getFName(){
+        return firstName;
+    }
+    // public String getLName(){
+    //     return lastName;
+    // }
+    public String getPassword(){
+        return password;
+    }
+    public void setAdminId(int adminId){
+        this.adminId = adminId;
+    }
+    public void setEmailId(String email){
+        this.email = email;
+    }
+    public void setFName(String firstName){
+        this.firstName = firstName;
+    }
+    // public void setLName(String lastName){
+    //     this.lastName = lastName;
+    // }
+    public void setPassword(String password){
+        this.password = password;
+    }
+    public String toString(){
+        return "Admin [adminId="+adminId+", emailId="+email+", firstName="+firstName+", password="+password+"]";
+    }
+}
+class Product{
+    private int productId;
+    private String productName;
+    private String productDesc;
+    private double price;
+    private int quantity;
+    private String category;
+    
+    public Product(){
+        
+    }
+    public Product(int productId, String productName, String productDesc, double price, int quantity, String category){
+        this.productId = productId;
+        this.productName = productName;
+        this.productDesc = productDesc;
+        this.price = price;
+        this.quantity = quantity;
+        this.category = category;
+    }
+    public int getProductId(){
+        return productId;
+    }
+    public String getProductName(){
+        return productName;
+    }
+    public String getProductDesc(){
+        return productDesc;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
+    public String getCategory(){
+        return category;
+    }
+    public void setProductId(int productId){
+        this.productId = productId;
+    }
+    public void setProductName(String productName){
+        this.productName = productName;
+    }
+    public void setProductDesc(String productDesc){
+        this.productDesc = productDesc;
+    }
+    public void setPrice(double price){
+        this.price = price;
+    }
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
+    }
+    public void setCategory(String category){
+        this.category = category;
+    }
+    public String toString(){
+        return "Product [productId="+productId+", productName="+productName+", productDescription="+productDesc+", price="+price+", quantity="+quantity+", Category="+category+"]";
+        // Product [productId=1001, productName=Dell I5 Laptop, productDescription=I5 with 8gb, price=60000.0, quantity=50, Category=Laptop]
+    }
+}

@@ -1,0 +1,164 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class Customer
+{
+    private int userId;
+    private String emailId;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String city;
+    private String gender;
+    private long phoneNumber;
+    private Address address;
+
+
+Customer(){}
+
+Customer(int userId,String emailId,String password,String firstName,
+         String lastName, String city, String gender, long phoneNumber,
+         Address address){
+             this.userId=userId;
+             this.emailId=emailId;
+             this.password=password;
+             this.firstName=firstName;
+             this.lastName=lastName;
+             this.city=city;
+             this.gender=gender;
+             this.phoneNumber=phoneNumber;
+             this.address=address;
+         }
+       
+         
+    public int getUserId(){
+        return this.userId;
+    }
+    public String getEmailId(){
+        return this.emailId;
+    }
+    public String getPassword(){
+        return this.password;
+    }
+    public String getFirstName(){
+        return this.firstName;
+    }
+    public String getLastName(){
+        return this.lastName;
+    }
+    public String getCity(){
+        return this.city;
+    }
+    public String getGender(){
+        return this.gender;
+    }
+    public long getPhoneNumber(){
+        return this.phoneNumber;
+    }
+    public Address getAddress(){
+        return this.address;
+    }
+    
+    
+   public void setUserId(int uid){
+       this.userId=uid;
+   }
+   public void setEmailId(String a){
+       this.emailId=a;
+   }
+   public void setPassword(String a){
+        this.password = a;
+    }
+    public void setFirstName(String a){
+        this.firstName = a;
+    }
+    public void setLastName(String a){
+        this.lastName = a;
+    }
+    public void setCity(String a){
+        this.city = a;
+    }
+    public void setGender(String a){
+        this.gender = a;
+    }
+    public void setPhoneNumber(long a){
+        this.phoneNumber = a;
+    }
+    public void setAddress(Address a){
+        this.address = a;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return String.format("Customer [userId=%d, emailId=%s, password=%s, firstName=%s, lastName=%s, city=%s, gender=%s, phoneNumber=%d, address=%s]",
+                        userId, emailId, password, firstName, lastName, city, gender, phoneNumber, address);
+    }
+}    
+
+
+class Address
+{
+    private String city;
+    private String state;
+    private int zip;
+    private String country;
+    
+    //default Constructor
+    Address()
+    {
+    }
+    
+    //Parameterized constructor
+    Address(String city, String state, int zip, String country)
+    {
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
+    }
+    
+    //getter
+    public String getCity(){
+        return this.city;
+    }
+    public String getState(){
+        return this.state;
+    }
+    public int getZip(){
+        return this.zip;
+    }
+    public String getCountry(){
+        return this.country;
+    }
+    
+    //setters
+    public void setCity(String a){
+        this.city = a;
+    }
+    public void setState(String a){
+        this.state = a;
+    }
+    public void setZip(int a){
+        this.zip = a;
+    }
+    public void setCountry(String a) {
+        this.country = a;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return String.format("Address [city=%s, state=%s, zip=%d, country=%s]",
+                            city, state, zip, country);
+    }   
+}
+public class Source {
+  public static void main(String args[] ) throws Exception {
+Customer customer = new Customer(101,"raj@gmail.com","xxxxxx","Krithick","Rajan","Chennai","Male",9001018761l,new Address("Chennai","TamilNadu",600075,"India"));
+  }
+    
+}

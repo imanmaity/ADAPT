@@ -1,0 +1,129 @@
+class Customer{
+   private int userId;
+   private String email;
+   private String password;
+   private String firstName;
+   private String lastName;
+   private String city;
+   private String gender;
+   private long phoneNumber;
+   private Address address;
+   
+   public Customer(){
+       
+   }
+   public Customer(int userId, String email, String password, String firstName, String lastName, String city, String gender, Long phoneNumber, Address address){
+       this.userId = userId;
+       this.email = email;
+       this.password = password;
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.city = city;
+       this.gender = gender;
+       this.phoneNumber = phoneNumber;
+       this.address = address;
+   }
+   public int getUserId(){
+       return userId;
+   }
+   public String getEmailId(){
+       return email;
+   }
+   public String getPassword(){
+       return password;
+   }
+   public String getFirstName(){
+       return firstName;
+   }
+   public String getLastName(){
+       return lastName;
+   }
+   public String getCity(){
+       return city;
+   }
+   public String getGender(){
+       return gender;
+   }
+   public long getPhoneNumber(){
+       return phoneNumber;
+   }
+   public Address getAddress(){
+       return this.address;
+   }
+   public void setUserId(int userId){
+       this.userId = userId;
+   }
+   public void setEmailId(String email){
+       this.email = email;
+   }
+   public void setPassword(String password){
+       this.password = password;
+   }
+   public void setFirstName(String firstName){
+       this.firstName = firstName;
+   }
+   public void setLastName(String lastName){
+       this.lastName = lastName;
+   }
+   public void setCity(String city){
+       this.city = city;
+   }
+   public void setGender(String gender){
+       this.gender = gender;
+   }
+   public void setPhoneNumber(long phoneNumber){
+       this.phoneNumber = phoneNumber;
+   }
+   public void setAddress(Address add){
+       this.address = add;
+   }
+   public String toString(){
+       return Customer [userId=+userId+, emailId=+email+, password=+password+, firstName=+firstName+, lastName=+lastName+, city=+city+, gender=+gender+, phoneNumber=+phoneNumber+, address=+address+];                                                       
+   }
+}
+class Address{
+    private String city;
+    private String state;
+    private int zip;
+    private String country;
+    public Address(){
+        
+    }
+    public Address(String city, String state, int zip, String country){
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
+    }
+    public String getCity()
+    {
+        return city;
+    }
+    public String getState()
+    {
+        return state;
+    }
+    public int getZip()
+    {
+        return zip;
+    }
+    public String getCountry()
+    {
+        return country;
+    }
+    public void setCity(String city){
+        this.city = city;
+    }
+    public void setState(String state){
+        this.state = state;
+    }
+    public void setZip(int zip){
+        this.zip = zip;
+    }
+    public void setCountry(String country){
+        this.country = country;
+    }
+    public String toString(){
+        return Address [city=+city+, state=+state+, zip=+zip+, country=+country+];
+    }
+}

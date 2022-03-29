@@ -1,0 +1,131 @@
+import java.util.Scanner;
+
+class MonthException extends Exception{
+
+	public MonthException(String message){
+	super(message);
+	}
+}
+
+class DayException extends Exception{
+	public DayException(String message){
+	super(message);
+	}
+}
+class YearException extends Exception{
+
+	public YearException(String message){
+	super(message);
+	}
+}
+
+public class TestException{
+
+	public static void main(String[] args) {
+
+	int monthnum;
+	int monthDays=0;
+	String monthName="";
+	String date="";
+	Scanner input=new Scanner(System.in);
+	System.out.println("Please enter a date in this format:
+	Month/Day/Year.");
+	date=input.next();
+	String[] pars=date.split("/");
+	int month=Integer.parseInt(pars[0]);
+	int day=Integer.parseInt(pars[1]);
+	int year=Integer.parseInt(pars[2]);
+
+
+switch(month){
+
+	case 1:
+		monthName="January";
+		monthDays=31;
+	case 2:
+		monthName="February";
+		monthDays=28;
+	case 3:
+		monthName="March";
+		monthDays=31;
+	case 4:
+		monthName="April";
+		monthDays=30;
+	case 5:
+		monthName="May";
+		monthDays=31;
+	case 6:
+		monthName="June";
+		monthDays=30;
+	case 7:
+		monthName="July";
+		monthDays=31;
+	case 8:
+		monthName="August";
+		monthDays=31;
+	case 9:
+		monthName="September";
+		monthDays=30;
+	case 10:
+		monthName="October";
+		monthDays=31;
+	case 11:
+		monthName="November";
+		monthDays=30;
+	case 12:
+		monthName="December";
+		monthDays=31;
+	default:
+		System.out.println("Not valid.");
+	}
+
+while(true){
+	try{
+	if(month&lt;1||month&gt;12){
+			throw new MonthException("The month must be numbers 1-12.");
+			}
+else{
+break;
+	}
+}
+catch(MonthException e){
+	System.out.println("Please enter a valid month: ");
+	month=input.nextInt();
+	continue;
+	}
+}
+while(true){
+	try{
+	if(day&lt;1||day&gt;monthDays){
+			throw new DayException("That day does not exist in this month.");
+	}
+else{
+break;
+	}
+}
+catch(DayException e){
+	System.out.println("Please enter a valid day: ");
+	day=input.nextInt();
+	continue;
+	}
+}
+while(true){
+	try{
+	if(year&lt;=1000||year&gt;=3000){
+	throw new YearException("The year must be between 1000 and 3000.");
+	}
+else{
+break;
+	}
+}
+
+catch(YearException e){
+System.out.println("Please enter a valid year: ");
+year=input.nextInt();
+continue;
+	}
+}
+System.out.println("The date conversion is: " + monthName+ " " + day + ",
+" + year);
+	}
+}	
